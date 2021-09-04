@@ -1,0 +1,12 @@
+result sum of 777 and 333 is 1110
+Found 1 devices
+Device 0
+Compute capability     : 6.1
+Name                   : NVIDIA GeForce GTX 1050 Ti
+Total Global Memory    : 4294967296
+Shared memory per block: 49152
+Registers per block    : 65536
+Warp size              : 32
+Max threads per block  : 1024
+Total constant memory  : 65536
+Total mmultiProcessor Count  : 6
