@@ -1,7 +1,7 @@
-result sum of 7777 and 3333 is 11110
+result sum of 7777 and 333 is 8110
 Found 1 devices
 Device 0
-Compute capability     : 6.1
+Compute capability     : 6.1227880776
 Name                   : NVIDIA GeForce GTX 1050 Ti
 Total Global Memory    : 4294967296
 Shared memory per block: 49152
