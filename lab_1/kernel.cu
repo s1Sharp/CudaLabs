@@ -25,8 +25,8 @@ int main()
     cudaMalloc((void**)&d_c, size);
     // Setup input values  
     c = int();
-    a = 777u;
-    b = 333u;
+    a = 7777u;
+    b = 3333u;
     // Copy inputs to device
     cudaMemcpy(d_a, &a, size, cudaMemcpyHostToDevice);
     cudaMemcpy(d_b, &b, size, cudaMemcpyHostToDevice);

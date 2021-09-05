@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CudaTest", "CudaTest\CudaTe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab_1", "lab_1\lab_1.vcxproj", "{7DA5ED0D-2006-4758-A4D5-48F80BD51181}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab_2", "lab_2\lab_2.vcxproj", "{962708A9-A7B3-4B2B-A716-93DF2B023E77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{7DA5ED0D-2006-4758-A4D5-48F80BD51181}.Debug|x64.Build.0 = Debug|x64
 		{7DA5ED0D-2006-4758-A4D5-48F80BD51181}.Release|x64.ActiveCfg = Release|x64
 		{7DA5ED0D-2006-4758-A4D5-48F80BD51181}.Release|x64.Build.0 = Release|x64
+		{962708A9-A7B3-4B2B-A716-93DF2B023E77}.Debug|x64.ActiveCfg = Debug|x64
+		{962708A9-A7B3-4B2B-A716-93DF2B023E77}.Debug|x64.Build.0 = Debug|x64
+		{962708A9-A7B3-4B2B-A716-93DF2B023E77}.Release|x64.ActiveCfg = Release|x64
+		{962708A9-A7B3-4B2B-A716-93DF2B023E77}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-result sum of 777 and 333 is 1110
+result sum of 7777 and 3333 is 11110
 Found 1 devices
 Device 0
 Compute capability     : 6.1
