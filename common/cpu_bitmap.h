@@ -69,7 +69,7 @@ struct CPUBitmap {
                 CPUBitmap*   bitmap = *(get_bitmap_ptr());
                 if (bitmap->dataBlock != NULL && bitmap->bitmapExit != NULL)
                     bitmap->bitmapExit( bitmap->dataBlock );
-                exit(0);
+                //exit(0);
         }
     }
 

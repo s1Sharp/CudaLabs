@@ -7,6 +7,7 @@
 #include <iostream>
 #include <memory>
 #include "timer.h"
+#include "bmout.h"
 
 
 
@@ -102,7 +103,8 @@ int main()
 
     HANDLE_ERROR(cudaMalloc((void**)&dev_ptr, bitmap.image_size()));
     //defer for free cuda mem 
-    defer _(nullptr, [&ptr](...) { cudaFree(ptr); if (!ptr) cout << "free"; });
+    defer d(nullptr, [dev_ptr](...) 
+        { cudaFree(dev_ptr);  cout << "free"; });
 
     dim3 grid(DIM, DIM);
 
@@ -120,6 +122,9 @@ int main()
     //
     cout << t.elapsedSeconds();
     t.stop();
+    SaveImage("output.bmp", (const char*)bitmap.get_ptr(),DIM,DIM);
     bitmap.display_and_exit();
+    cudaFree(dev_ptr);
+    cout<<"suq";
     
 }
