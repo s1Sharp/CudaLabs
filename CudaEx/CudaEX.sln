@@ -13,6 +13,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WaveEffect", "WaveEffect\Wa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scalar", "Scalar\Scalar.vcxproj", "{6BE9E9C9-077B-4BC6-A49A-E36819D32769}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayTracing", "RayTracing\RayTracing.vcxproj", "{9F574A56-0E40-4A2A-9212-8F881D40572C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeatExchange", "HeatExchange\HeatExchange.vcxproj", "{55E162D3-0943-4886-B0A1-601D9B5C2A50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -39,6 +43,14 @@ Global
 		{6BE9E9C9-077B-4BC6-A49A-E36819D32769}.Debug|x64.Build.0 = Debug|x64
 		{6BE9E9C9-077B-4BC6-A49A-E36819D32769}.Release|x64.ActiveCfg = Release|x64
 		{6BE9E9C9-077B-4BC6-A49A-E36819D32769}.Release|x64.Build.0 = Release|x64
+		{9F574A56-0E40-4A2A-9212-8F881D40572C}.Debug|x64.ActiveCfg = Debug|x64
+		{9F574A56-0E40-4A2A-9212-8F881D40572C}.Debug|x64.Build.0 = Debug|x64
+		{9F574A56-0E40-4A2A-9212-8F881D40572C}.Release|x64.ActiveCfg = Release|x64
+		{9F574A56-0E40-4A2A-9212-8F881D40572C}.Release|x64.Build.0 = Release|x64
+		{55E162D3-0943-4886-B0A1-601D9B5C2A50}.Debug|x64.ActiveCfg = Debug|x64
+		{55E162D3-0943-4886-B0A1-601D9B5C2A50}.Debug|x64.Build.0 = Debug|x64
+		{55E162D3-0943-4886-B0A1-601D9B5C2A50}.Release|x64.ActiveCfg = Release|x64
+		{55E162D3-0943-4886-B0A1-601D9B5C2A50}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
