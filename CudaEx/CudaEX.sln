@@ -7,6 +7,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CudaEX", "CudaEX\CudaEX.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JuliaFrac", "JuliaFrac\JuliaFrac.vcxproj", "{B632711A-5B42-42BD-9B5C-43B99A02FE50}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors", "Vectors\Vectors.vcxproj", "{757616C5-17D1-4E8E-B92C-DE45E74347FA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WaveEffect", "WaveEffect\WaveEffect.vcxproj", "{9E68AB6D-C8AC-4756-8D78-2010587A41B4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scalar", "Scalar\Scalar.vcxproj", "{6BE9E9C9-077B-4BC6-A49A-E36819D32769}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +27,18 @@ Global
 		{B632711A-5B42-42BD-9B5C-43B99A02FE50}.Debug|x64.Build.0 = Debug|x64
 		{B632711A-5B42-42BD-9B5C-43B99A02FE50}.Release|x64.ActiveCfg = Release|x64
 		{B632711A-5B42-42BD-9B5C-43B99A02FE50}.Release|x64.Build.0 = Release|x64
+		{757616C5-17D1-4E8E-B92C-DE45E74347FA}.Debug|x64.ActiveCfg = Debug|x64
+		{757616C5-17D1-4E8E-B92C-DE45E74347FA}.Debug|x64.Build.0 = Debug|x64
+		{757616C5-17D1-4E8E-B92C-DE45E74347FA}.Release|x64.ActiveCfg = Release|x64
+		{757616C5-17D1-4E8E-B92C-DE45E74347FA}.Release|x64.Build.0 = Release|x64
+		{9E68AB6D-C8AC-4756-8D78-2010587A41B4}.Debug|x64.ActiveCfg = Debug|x64
+		{9E68AB6D-C8AC-4756-8D78-2010587A41B4}.Debug|x64.Build.0 = Debug|x64
+		{9E68AB6D-C8AC-4756-8D78-2010587A41B4}.Release|x64.ActiveCfg = Release|x64
+		{9E68AB6D-C8AC-4756-8D78-2010587A41B4}.Release|x64.Build.0 = Release|x64
+		{6BE9E9C9-077B-4BC6-A49A-E36819D32769}.Debug|x64.ActiveCfg = Debug|x64
+		{6BE9E9C9-077B-4BC6-A49A-E36819D32769}.Debug|x64.Build.0 = Debug|x64
+		{6BE9E9C9-077B-4BC6-A49A-E36819D32769}.Release|x64.ActiveCfg = Release|x64
+		{6BE9E9C9-077B-4BC6-A49A-E36819D32769}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
