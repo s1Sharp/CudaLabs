@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CudaEX", "CudaEX\CudaEX.vcxproj", "{C7FAEACC-31E3-4C70-88A1-97930943428E}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JuliaFrac", "JuliaFrac\JuliaFrac.vcxproj", "{B632711A-5B42-42BD-9B5C-43B99A02FE50}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors", "Vectors\Vectors.vcxproj", "{757616C5-17D1-4E8E-B92C-DE45E74347FA}"
@@ -15,9 +13,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scalar", "Scalar\Scalar.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayTracing", "RayTracing\RayTracing.vcxproj", "{9F574A56-0E40-4A2A-9212-8F881D40572C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeatExchange2D", "HeatExchange\HeatExchange.vcxproj", "{55E162D3-0943-4886-B0A1-601D9B5C2A50}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeatExchange2D", "HeatExchange2D\HeatExchange2D.vcxproj", "{55E162D3-0943-4886-B0A1-601D9B5C2A50}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeatExchange", "HeatExchange2D\HeatExchange2D.vcxproj", "{C78E4DE8-B0C8-40D8-8C7E-7DC0CD9E0610}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeatExchange", "HeatExchange\HeatExchange.vcxproj", "{DF36DDB2-F291-4502-BF23-A85C5AE87252}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeatExchange1D", "HeatExchange1D\HeatExchange1D.vcxproj", "{8AFACA45-3340-4D13-ADB3-AA2E813BAF4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C7FAEACC-31E3-4C70-88A1-97930943428E}.Debug|x64.ActiveCfg = Debug|x64
-		{C7FAEACC-31E3-4C70-88A1-97930943428E}.Debug|x64.Build.0 = Debug|x64
-		{C7FAEACC-31E3-4C70-88A1-97930943428E}.Release|x64.ActiveCfg = Release|x64
-		{C7FAEACC-31E3-4C70-88A1-97930943428E}.Release|x64.Build.0 = Release|x64
 		{B632711A-5B42-42BD-9B5C-43B99A02FE50}.Debug|x64.ActiveCfg = Debug|x64
 		{B632711A-5B42-42BD-9B5C-43B99A02FE50}.Debug|x64.Build.0 = Debug|x64
 		{B632711A-5B42-42BD-9B5C-43B99A02FE50}.Release|x64.ActiveCfg = Release|x64
@@ -53,10 +49,14 @@ Global
 		{55E162D3-0943-4886-B0A1-601D9B5C2A50}.Debug|x64.Build.0 = Debug|x64
 		{55E162D3-0943-4886-B0A1-601D9B5C2A50}.Release|x64.ActiveCfg = Release|x64
 		{55E162D3-0943-4886-B0A1-601D9B5C2A50}.Release|x64.Build.0 = Release|x64
-		{C78E4DE8-B0C8-40D8-8C7E-7DC0CD9E0610}.Debug|x64.ActiveCfg = Debug|x64
-		{C78E4DE8-B0C8-40D8-8C7E-7DC0CD9E0610}.Debug|x64.Build.0 = Debug|x64
-		{C78E4DE8-B0C8-40D8-8C7E-7DC0CD9E0610}.Release|x64.ActiveCfg = Release|x64
-		{C78E4DE8-B0C8-40D8-8C7E-7DC0CD9E0610}.Release|x64.Build.0 = Release|x64
+		{DF36DDB2-F291-4502-BF23-A85C5AE87252}.Debug|x64.ActiveCfg = Debug|x64
+		{DF36DDB2-F291-4502-BF23-A85C5AE87252}.Debug|x64.Build.0 = Debug|x64
+		{DF36DDB2-F291-4502-BF23-A85C5AE87252}.Release|x64.ActiveCfg = Release|x64
+		{DF36DDB2-F291-4502-BF23-A85C5AE87252}.Release|x64.Build.0 = Release|x64
+		{8AFACA45-3340-4D13-ADB3-AA2E813BAF4B}.Debug|x64.ActiveCfg = Debug|x64
+		{8AFACA45-3340-4D13-ADB3-AA2E813BAF4B}.Debug|x64.Build.0 = Debug|x64
+		{8AFACA45-3340-4D13-ADB3-AA2E813BAF4B}.Release|x64.ActiveCfg = Release|x64
+		{8AFACA45-3340-4D13-ADB3-AA2E813BAF4B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,7 +15,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{55E162D3-0943-4886-B0A1-601D9B5C2A50}</ProjectGuid>
-    <RootNamespace>HeatExchange</RootNamespace>
+    <RootNamespace>HeatExchange2D</RootNamespace>
     <ProjectName>HeatExchange2D</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
