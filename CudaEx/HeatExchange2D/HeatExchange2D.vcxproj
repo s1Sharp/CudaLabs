@@ -14,7 +14,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{55E162D3-0943-4886-B0A1-601D9B5C2A50}</ProjectGuid>
+    <ProjectGuid>{C78E4DE8-B0C8-40D8-8C7E-7DC0CD9E0610}</ProjectGuid>
     <RootNamespace>HeatExchange</RootNamespace>
     <ProjectName>HeatExchange2D</ProjectName>
   </PropertyGroup>
