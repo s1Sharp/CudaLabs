@@ -14,8 +14,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DF36DDB2-F291-4502-BF23-A85C5AE87252}</ProjectGuid>
-    <RootNamespace>HeatExchange</RootNamespace>
+    <ProjectGuid>{8AFACA45-3340-4D13-ADB3-AA2E813BAF4B}</ProjectGuid>
+    <RootNamespace>HeatExchange1D</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
