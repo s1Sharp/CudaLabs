@@ -122,32 +122,27 @@ int main()
 
 
     float* temp = (float*)malloc(bitmap.image_size());
-    for (int i = 0; i < DIM * DIM; i++)
-    {
+    for (int i = 0; i < DIM * DIM; i++) {
         temp[i] = 0;
         int x = i % DIM;
         int y = i / DIM;
-        if ((x > 500) && (x < 600) && (y > 310) && (y < 410))
+        if ((x > 300) && (x < 600) && (y > 310) && (y < 601))
             temp[i] = MAX_TEMP;
     }
     temp[DIM * 100 + 100] = (MAX_TEMP + MIN_TEMP) / 2;
-    temp[DIM * 400 + 150] = MIN_TEMP;
-    temp[DIM * 200 + 200] = MIN_TEMP;
-    temp[DIM * 200 + 400] = MIN_TEMP;
-    for (int y = 800; y < 900; y++)
-    {
-        for (int x = 400; x < 500; x++)
-        {
+    temp[DIM * 700 + 100] = MIN_TEMP;
+    temp[DIM * 300 + 300] = MIN_TEMP;
+    temp[DIM * 200 + 700] = MIN_TEMP;
+    for (int y = 800; y < 900; y++) {
+        for (int x = 400; x < 500; x++) {
             temp[x + y * DIM] = MIN_TEMP;
         }
     }
-
     HANDLE_ERROR(cudaMemcpy(data.dev_constSrc,
         temp, bitmap.image_size(), cudaMemcpyHostToDevice));
 
-    for (int y = 600; y < DIM - 200; y++)
-    {
-        for (int x = 300; x < 500; x++) {
+    for (int y = 800; y < DIM; y++) {
+        for (int x = 0; x < 200; x++) {
             temp[x + y * DIM] = MAX_TEMP;
         }
     }
