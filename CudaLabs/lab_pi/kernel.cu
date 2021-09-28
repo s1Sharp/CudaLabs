@@ -23,24 +23,19 @@ __global__ void Pi(int* count, curandState_t* globalState,unsigned int seed,int 
 	int stride = blockDim.x * gridDim.x;
 
 	curand_init(seed, indx, 0, &globalState[indx]);
-	//printf("idx = %u \n", indx);
 
 	curandState_t localState = globalState[indx];
 	while (indx < accuracy) {
-		
+
 
 		float temp_x = curand_uniform(&localState);
 		float temp_y = curand_uniform(&localState);
-
-		float z = temp_x * temp_x + temp_y * temp_y; 
-		//printf("x = %f y = %f z = %f\n", temp_x, temp_y,z); 
+		float z = temp_x * temp_x + temp_y * temp_y;
 		if (z < 1.0f) {
 			atomicAdd(count, 1);
 		}
-		//printf("indx = %u , count = %u\n", indx, *count);
-		indx +=stride;
+		indx += stride;
 	}
-	//printf("max = %u \n", indx-stride);
 }
 
 int main()
