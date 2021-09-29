@@ -11,6 +11,7 @@
 #define ACCURACY 12828849
 #define NUM_OF_ITER 10
 
+
 using defer = std::shared_ptr<void>;
 
 //cuRandom API prototype 
@@ -25,9 +26,8 @@ __global__ void Pi(int* count, curandState_t* globalState,unsigned int seed,int 
 	curand_init(seed, indx, 0, &globalState[indx]);
 
 	curandState_t localState = globalState[indx];
-	while (indx < accuracy) {
-
-
+	while (indx < accuracy) 
+	{
 		float temp_x = curand_uniform(&localState);
 		float temp_y = curand_uniform(&localState);
 		float z = temp_x * temp_x + temp_y * temp_y;
@@ -55,32 +55,28 @@ int main()
 	int total = (ACCURACY - (ACCURACY % threads)); //last indx of __global__ func
 	printf("kernel start with %u blocks and %u threads, total %u\n", blocks, threads,total);
 
-
-
 	//for random eq
 	curandState_t* devState;
 	cudaMalloc((void**)&devState, total * sizeof(curandState_t));
 
-
-
 	//allocate memory on GPU
 	cudaMalloc((void**)&dev_count, sizeof(int));
 
-	//use un_ptr, that don`t forget free memory
-	defer _(nullptr, [dev_count, devState](...)
-		{ cudaFree(dev_count); cudaFree(devState);  printf("free"); });
-
 	// starting the timer here so that we include the cost of
 	// all of the operations on the GPU.
-	cudaEvent_t     start, stop;
+	cudaEvent_t start, stop;
 	cudaEventCreate(&start);
 	cudaEventCreate(&stop);
 	cudaEventRecord(start, 0);
 
-	
+
+	//use un_ptr, that don`t forget free memory
+	defer _(nullptr, [dev_count, devState, start, stop](...)
+		{ cudaFree(dev_count); cudaFree(devState); cudaEventDestroy(start); cudaEventDestroy(stop);  printf("free"); });
+
+
 	for (int iter = 0; iter < NUM_OF_ITER; iter++)
 	{
-
 		//kernel
 		Pi << < blocks, threads >> > (dev_count, devState, seed, total);
 
@@ -101,8 +97,8 @@ int main()
 	float   elapsedTime;
 	cudaEventElapsedTime(&elapsedTime, start, stop);
 	printf("Time to generate:  %3.1f ms in mean foreach iter, total time: %3.1f ms \n", elapsedTime/NUM_OF_ITER, elapsedTime);
-
-
+	
+	//result
 	printf("result = %f\n", res / NUM_OF_ITER);
 
 	return 0;
