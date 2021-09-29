@@ -9,8 +9,8 @@
 #include <chrono>
 #include <algorithm>
 
-#define ACCURACY 12828879
-#define NUM_OF_ITER 10
+#define ACCURACY 62828879
+#define NUM_OF_ITER 100
 
 
 using defer = std::shared_ptr<void>;
@@ -52,7 +52,7 @@ int main()
 	cudaGetDeviceProperties(&prop, 0);
 	
 	//max Speed with blocks * 2
-	int blocks = prop.multiProcessorCount *  2;
+	int blocks = prop.multiProcessorCount * 2; 
 	int threads = prop.maxThreadsPerBlock;
 	int total = (ACCURACY - (ACCURACY % threads)); //last indx of __global__ func
 	printf("kernel start with %u blocks and %u threads, total %u\n", blocks, threads,total);
@@ -97,9 +97,9 @@ int main()
 		res += tempres;
 	}
 
-	std::sort(sort_res, sort_res + 10);
+	std::sort(sort_res, sort_res + NUM_OF_ITER);
 	printf("______sorted result_____ \n");
-	for (size_t i = 0; i < 10; i++)
+	for (size_t i = 0; i < NUM_OF_ITER; i++)
 	{
 		printf("\tPI: %f \n",*(sort_res + i));
 	}
@@ -109,7 +109,7 @@ int main()
 	cudaEventSynchronize(stop);
 	float   elapsedTime;
 	cudaEventElapsedTime(&elapsedTime, start, stop);
-	printf("Time to generate:  %3.1f ms in mean foreach iter, total time: %3.1f ms \n", elapsedTime/NUM_OF_ITER, elapsedTime);
+	printf("Time to generate:  %3.1f ms in mean foreach iter, total time: %3.1f ms \n", elapsedTime / NUM_OF_ITER, elapsedTime);
 	
 	//result
 	printf("result = %f\n", res / NUM_OF_ITER);
