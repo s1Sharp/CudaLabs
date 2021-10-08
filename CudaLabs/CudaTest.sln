@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CudaLabs", "CudaLabs", "{A8
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab_pi", "lab_pi\lab_pi.vcxproj", "{50A13C2D-008F-47E4-927B-BFF225AB69D1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab_AtomicPi", "lab_AtomicPi\lab_AtomicPi.vcxproj", "{18763B98-5242-4EF0-BEB2-F412018B82D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -37,6 +39,12 @@ Global
 		{50A13C2D-008F-47E4-927B-BFF225AB69D1}.Release|x64.ActiveCfg = Release|x64
 		{50A13C2D-008F-47E4-927B-BFF225AB69D1}.Release|x64.Build.0 = Release|x64
 		{50A13C2D-008F-47E4-927B-BFF225AB69D1}.Release|x86.ActiveCfg = Release|x64
+		{18763B98-5242-4EF0-BEB2-F412018B82D1}.Debug|x64.ActiveCfg = Debug|x64
+		{18763B98-5242-4EF0-BEB2-F412018B82D1}.Debug|x64.Build.0 = Debug|x64
+		{18763B98-5242-4EF0-BEB2-F412018B82D1}.Debug|x86.ActiveCfg = Debug|x64
+		{18763B98-5242-4EF0-BEB2-F412018B82D1}.Release|x64.ActiveCfg = Release|x64
+		{18763B98-5242-4EF0-BEB2-F412018B82D1}.Release|x64.Build.0 = Release|x64
+		{18763B98-5242-4EF0-BEB2-F412018B82D1}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +53,7 @@ Global
 		{7DA5ED0D-2006-4758-A4D5-48F80BD51181} = {A8BB7595-BE94-403B-AC73-EF3B79507DC1}
 		{962708A9-A7B3-4B2B-A716-93DF2B023E77} = {A8BB7595-BE94-403B-AC73-EF3B79507DC1}
 		{50A13C2D-008F-47E4-927B-BFF225AB69D1} = {A8BB7595-BE94-403B-AC73-EF3B79507DC1}
+		{18763B98-5242-4EF0-BEB2-F412018B82D1} = {A8BB7595-BE94-403B-AC73-EF3B79507DC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {825039A4-A2A9-43FD-A7AE-A0F2817151EF}
