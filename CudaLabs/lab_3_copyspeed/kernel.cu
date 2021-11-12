@@ -43,6 +43,9 @@ int main()
     cudaFree(dev_tmp);
     free(tmp);
 
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
+
     return 0;
 }
 
