@@ -6,14 +6,16 @@
 #include <memory>
 #include <ctime>
 #include <stdio.h>
+#include <stdlib.h>
 #include <chrono>
 #include <algorithm>
+#include <numeric>   
 
 
 using defer = std::shared_ptr<void>;
 
-#define WIDTH 32
 #define HEIGHT 32
+#define WIDTH 32
 #define hBLOCKS 6
 #define wBLOCKS 6
 
@@ -36,16 +38,19 @@ __global__ void CalculatePointsIntheCircle(int* result, int randseed)
 
     if (inCircle(&state))
     {
-        atomicAdd(result, 1);
+        atomicAdd(&result[threadIdx.x * HEIGHT + threadIdx.y], 1);
     }
+    return;
 }
 
 int main()
 {
-    int count = 0;
+    const size_t size = WIDTH * HEIGHT;
+    int count [size];
+    memset(&count, 0, size * sizeof(int));
     int* dev_count;
 
-    cudaMalloc((void**)&dev_count, sizeof(int));
+    cudaMalloc((void**)&dev_count, size * sizeof(int));
     
     // starting the timer here so that we include the cost of
     // all of the operations on the GPU.
@@ -66,9 +71,15 @@ int main()
 
     CalculatePointsIntheCircle <<<blocks, threads >>> (dev_count, randseed);
 
-    cudaMemcpy(&count, dev_count, sizeof(int), cudaMemcpyDeviceToHost);
+    cudaMemcpy(&count, dev_count, size * sizeof(int), cudaMemcpyDeviceToHost);
     // result pi
-    float pi = (4.0f * static_cast<float>(count)) / static_cast<float>(HEIGHT * WIDTH * hBLOCKS * wBLOCKS);
+
+    int ans = 0;
+    ans = std::accumulate(&count[0], &count[size - 1], ans);
+
+    float fullsize = static_cast<float>(HEIGHT * WIDTH * hBLOCKS * wBLOCKS);
+    float pi = (4.0f * static_cast<float>(ans));
+    pi /=  fullsize;
     printf("Result pi %f \n", pi);
 
     //print elapsed time
