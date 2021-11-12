@@ -84,10 +84,10 @@ __global__ void simpson(T start,T stop,size_t num, T* result, bool endpoint = tr
 }
 
 
-void integralSimpson(const int& start, const int& stop, size_t N) = delete;
+int integralSimpson(const int& start, const int& stop, size_t N) = delete;
 
 template<typename T = float>
-void integralSimpson(const T& start, const T& stop, size_t N)
+T integralSimpson(const T& start, const T& stop, size_t N)
 {
 	if (N < 1)
 		N = defaultNUM;
@@ -113,5 +113,5 @@ void integralSimpson(const T& start, const T& stop, size_t N)
 
 	cudaFree(dev_ptr);
 
-	return;
+	return rtp;
 }
