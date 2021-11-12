@@ -29,7 +29,6 @@ __device__ bool inCircle(curandState_t* state)
 __global__ void CalculatePointsIntheCircle(int* result, int randseed)
 {
     curandState_t state;
-    (threadIdx.x + blockDim.x * blockIdx.x)* threadIdx.y + blockDim.y * blockIdx.y;
     unsigned long long seed = (threadIdx.x + blockDim.x * blockIdx.x) + (threadIdx.y + blockDim.y * blockIdx.y) * (randseed % 1000);
 
     //init curand
