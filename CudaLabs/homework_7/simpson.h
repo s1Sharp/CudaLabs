@@ -109,9 +109,10 @@ T integralSimpson(const T& start, const T& stop, size_t N)
 	cudaMemcpy(&ptr, dev_ptr, sizeof(float) , cudaMemcpyDeviceToHost);
 
 	
-	printf("%f - result on gpu\n", ptr);
+	printf("%f - result on gpu (simpson)\n", ptr);
 
 	cudaFree(dev_ptr);
 
-	return rtp;
+	return ptr;
 }
+

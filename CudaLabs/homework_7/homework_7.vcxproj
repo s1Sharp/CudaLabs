@@ -93,6 +93,7 @@
   <ItemGroup>
     <ClInclude Include="meraVector.h" />
     <ClInclude Include="simpson.h" />
+    <ClInclude Include="rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
