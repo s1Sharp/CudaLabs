@@ -297,7 +297,22 @@ namespace mymatrix {
             printf("Матрицы не согласованны\n");
             return *this;
         }
-      
+        
+        const bool operator==(const MATRIX& _M)
+        {
+            if (this == &_M)
+                return true;
+
+                if (this->rows != _M.rows || this->columns != _M.columns)
+                    return false;
+
+            // Скопировать элементы
+            for (int i = 0; i < rows; i++)
+                for (int j = 0; j < columns; j++)
+                    if (M[j + columns * i] != _M.M[j + columns * i])
+                        return false;
+            return true;
+        }
 
         MATRIX& Transpose()
         {
@@ -409,24 +424,33 @@ namespace mymatrix {
         M.Print("M");
 
         MATRIX<int> M2 = M; // вызов конструктора копирования
-        M2.Print("M2: вызов конструктора копирования");
+        M2.Print("M2: copy operator");
 
         MATRIX<int> M3; // вызов оператора копирования - проверка
         M3 = M + M2;
-        M3.Print("M3: вызов оператора копирования - проверка");
+        M3.Print("M3: copy operator - operator+");
 
         MATRIX<int> M4;
         M4 = M3 = M2 = M; // вызов оператора копирования в виде "цепочки"
 
-        M4.Print("M4: вызов оператора копирования в виде цепочки");
+        M4.Print("M4: chain operator=");
         M4.Transpose();
-        M4.Print("M4: T");
+        M4.Print("M4: Transpose");
 
 
-        (M + M2).RandInsert().Print().Transpose().Print();
+        (M + M2).RandInsert().Print("M + M2 - Transpose").Transpose().Print();
 
         M.Print();
         M2.Print();
-        (M * M2).Print("mult");
+        (M * M2).Print("M * M2 mult");
+
+
+        //Model 6 hw 1
+        MATRIX<int> Mequaltest(2, 2);
+        MATRIX<int> Mequaltest2(2, 2);
+        Mequaltest.RandInsert();
+        Mequaltest2 = Mequaltest;
+
+        std::cout << "\nCommuting matrices is " << (((Mequaltest * Mequaltest2) == (Mequaltest2 * Mequaltest))? "true": "false");
     }
 }
