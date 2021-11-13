@@ -451,6 +451,7 @@ namespace mymatrix {
         Mequaltest.RandInsert();
         Mequaltest2 = Mequaltest;
 
+
         std::cout << "\nCommuting matrices is " << (((Mequaltest * Mequaltest2) == (Mequaltest2 * Mequaltest))? "true": "false");
     }
 }
