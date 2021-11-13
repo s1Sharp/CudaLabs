@@ -1,16 +1,16 @@
 # My output in debug x64 mode:
 
-elapsed time 0.066464 ms by float
+elapsed time 0.066464 sес by float
 
-elapsed time 0.071008 ms by double
+elapsed time 0.071008 sес by double
 
 relation float/double = 0.936
  
 # My output in release x64 mode:
 
-elapsed time 0.009216 ms by float
+elapsed time 0.009216 sес by float
 
-elapsed time 0.012000 ms by double
+elapsed time 0.012000 sес by double
 
 relation float/double = 0.768
 
