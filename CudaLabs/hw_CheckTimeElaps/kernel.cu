@@ -109,7 +109,7 @@ __host__ void kernel()
 
     float   elapsedTime;
     cudaEventElapsedTime(&elapsedTime, start, stop);
-    printf("\n\nelapsed time %f ms by %s\n\n", elapsedTime, typeid(T).name());
+    printf("\n\nelapsed time %f sec by %s\n\n", elapsedTime, typeid(T).name());
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
 
