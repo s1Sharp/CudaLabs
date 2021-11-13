@@ -38,7 +38,7 @@ void generateVector(T* _ptr, size_t size)
     srand(4721u);
     for (size_t i = 0; i < size; i++)
     {
-        _ptr[i] = static_cast<T>(2);//(rand() % 2);
+        _ptr[i] = static_cast<T>(rand() % 32);
     }
     return;
 
